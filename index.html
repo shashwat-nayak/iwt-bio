@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+        function abc() {
+            const passWord = document.getElementById("password").value;
+            const userName = document.getElementById("username").value;
+            console.log(passWord);
+            if (
+                passWord === "CE@iiit" &&
+                (userName == "B520050" || parseInt(userName) == 50)
+            ) {
+                document.getElementById("password").value = "";
+                document.getElementById("username").value = "";
+                location.replace(`bio.html`);
+            } else if (passWord !== "CE@iiit") {
+                alert(`Wrong Password`);
+                document.getElementById("password").value = "";
+            } else {
+                alert(`Invalid Username`);
+                document.getElementById("username").value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="login-form-wrap">
+  <h2>Login</h2>
+  <div id="login-form">
+    <p>
+    <input type="text" id="username" name="username" placeholder="Username">
+    </p>
+    <p>
+    <input type="password" id="password" name="password" placeholder="Password" >
+    </p>
+    <p>
+    <button onclick="abc()" >
+      Submit
+    </button>
+    </p>
+    <br>
+    <br>
+  </div>
+ 
+</div>
+  
+</body>
+</html>
